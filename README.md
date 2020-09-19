@@ -1,6 +1,5 @@
-# Image Denoising
 # Frequency Attention Network
-This project is for a image denoising networks which I called it Frequency Attention Network(FAN).
-This network combine frequency analysis and neural network to solve real-image denoising task and can achieve outstanding performance compared with other methods on SIDD and DND benchmarks.
+This repository is for Frequency Attention Network(FAN) introduced in the following paper
+Frequency Attention Network: Blind Noise Removal for Real Images, ACCV, 2020
 
-The test code and train code will be released soon!
+More details will be released soon!
