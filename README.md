@@ -16,17 +16,27 @@ With outstanding feature extraction capabilities, deep convolutional neural netw
 
 ![FAN Architecture](https://github.com/momo1689/FAN/blob/master/figs/network.png)
 
+Our proposed method FAN contains two subnetwork -- Est-Net and De-Net. Est-Net is to estimate the noise level map which plays the role of guidance. De-Net is for image denoising.
+
 ![Spatial-Channel Attention Block](https://github.com/momo1689/FAN/blob/master/figs/SCAB.png)
+
+The SCAB combines the spatial attention mechanism and channel attention mechanism. The spatial mechanism can reweight the feature maps based on the position of different feature maps while the channel mechanism can focus on different types of features.
 
 ## Results on AWGN
 
 ![Test on sigma=50](https://github.com/momo1689/FAN/blob/master/figs/awgn.png)
 
+Test on the LIVE1 dataset with the addiative gaussian white noise of sigma = 50.
+
 ## Results on Real Noise Dataset
 
 ![Test on SIDD Dataset](https://github.com/momo1689/FAN/blob/master/figs/SIDD.png)
 
+One example of test on SIDD dataset.
+
 ![Test on DND Dataset](https://github.com/momo1689/FAN/blob/master/figs/DND.png)
+
+One example of test on DND dataset.
 
 ## Code User Guide
 
