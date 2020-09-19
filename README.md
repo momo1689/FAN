@@ -3,4 +3,37 @@ This repository is for Frequency Attention Network(FAN) introduced in the follow
 
 Frequency Attention Network: Blind Noise Removal for Real Images, ACCV, 2020
 
-More details will be released soon!
+## Requirement and Dependecies
+
+* Python 3.6, torch 1.1.0
+* More details(see requirements.txt)
+
+## Abstract
+
+With outstanding feature extraction capabilities, deep convolutional neural networks(CNNs) have achieved extraordinary improvements in image denoising tasks. However, because of the difference of statistical characteristics of signal-dependent noise and signal-independent noise, it is hard to model real noise for training and blind real image denoising is still an important challenge problem. In this work we propose a method for blind image denoising that combines frequency domain analysis and attention mechanism, named frequency attention network(FAN). We adopt wavelet transform to convert images from spatial domain to frequency domain with more sparse features to utilize spectral information and structure information. For the denoising task, the objective of the neural network is to estimate the optimal solution of the wavelet coeffcients of the clean image by nonlinear characteristics, which makes FAN possess good interpretability. Meanwhile, spatial and channel mechanisms are employed to enhance feature maps at different scales for capturing contextual information. Extensive experiments on the synthetic noise dataset and two real-world noise benchmarks indicate the superiority of our method over other competing methods at different noise type cases in blind image denoising.
+
+## Network Architecture
+
+![FAN Architecture](https://github.com/momo1689/FAN/blob/master/figs/network.png)
+
+![Spatial-Channel Attention Block](https://github.com/momo1689/FAN/blob/master/figs/SCAB.png)
+
+## Results on AWGN
+
+![Test on sigma=50](https://github.com/momo1689/FAN/blob/master/figs/awgn.png)
+
+## Results on Real Noise Dataset
+
+![Test on SIDD Dataset](https://github.com/momo1689/FAN/blob/master/figs/SIDD.png)
+
+![Test on DND Dataset](https://github.com/momo1689/FAN/blob/master/figs/DND.png)
+
+## Code User Guide
+
+### Test Additive White Gaussian Noise(AWGN)
+
+python test_awgn.py --ckpt[trained model] --img_dir[dataset directory] --sigma[sigma] --gpu[GPU or CPU]
+
+### Test Real-World Noise
+
+python test_real_noise.py --ckpt[trained model] --img_dir[dataset directory] --is_gt[whether to compare ground truth(please set False when test the DND dataset)] --gpu[GPU or CPU]
