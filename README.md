@@ -3,6 +3,8 @@ This repository is for Frequency Attention Network(FAN) introduced in the follow
 
 [Frequency Attention Network: Blind Noise Removal for Real Images, ACCV, 2020](https://openaccess.thecvf.com/content/ACCV2020/papers/Mo_Frequency_Attention_Network_Blind_Noise_Removal_for_Real_Images_ACCV_2020_paper.pdf)
 
+The checkpoint files can be download here. [Checkpoint](https://pan.baidu.com/s/10m5jEw76GUKQUfe32po-kA) The extracted code is ev3w.
+
 ## Requirement and Dependecies
 
 * Python 3.6, torch 1.1.0
